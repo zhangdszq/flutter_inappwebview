@@ -501,6 +501,9 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate, WKNavi
                 }
             }
             
+            if !options.applicationNameForUserAgent.isEmpty {
+                configuration.applicationNameForUserAgent = options.applicationNameForUserAgent
+            }
             if #available(iOS 10.0, *) {
                 configuration.ignoresViewportScaleLimits = options.ignoresViewportScaleLimits
                 
